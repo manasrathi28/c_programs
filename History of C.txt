@@ -1,0 +1,163 @@
+History of C
+
+This language was designed & developed by a person named "Dennis Ritchie" in 1972 in Bell Labs, USA.
+
+Programming languages are categorised into 2 types.
+
+1. High Level languages	2. Low Level Languages
+
+High Level Languages - Here the programming efficiency is good but execution speed is poor. Eg of languages in this category are BASIC, PASCAL, FORTRAN, COBOL, JAVA, PYTHON, etc.
+
+Low Level Languages - Here the programming efficiency is poor but execution speed is good. Eg of languages in this category are Machine & Assembly languages.
+
+C is a middle language i.e. the programming efficiency is fairly good & also C compiler is very powerful which will execute the application very fast/speedily.
+
+Terms to know before we start programming
+
+1. variables - These are temporary storage places defined in the RAM (Random Access Memory - made available on Motherboard of system) to hold data from user. This data can be used for further processing, taking decisions, controlling the flow of program, etc.
+
+2. datatypes - These define the kind/type of data which a variable can hold. Some of the basic types available in C language are
+
+a. char - Used to store any single character from keyboard i.e. alphabet, digit or a symbol.
+
+b. int - int stands for integer. Can store whole nos without decimals & signed (-ve) as well as unsigned (+ve)
+
+c. float - Can store nos with decimals with accuracy of 6 decimal places, both signed & unsigned
+
+3. expressions - eg a + b, x - y * z, etc.  a,b,x,y,z are called as "operands" i.e. names of variables & +, -, * etc are called as arithmetical operators. C supports only 5 arithmetical operators + - * / % (modulus operator). The modulus operator returns the remainder when 1 no is divided by another.
+
+It returns 0 when numerator is completely divisible by denominator. 
+
+Eg 10 % 2 is 0.  10 % 3 is 1.
+
+Also any no % 10, returns the last digit of that no
+                        3095
+                      ________
+	10  | 30956
+	       30950
+                      ------------
+	              6
+                      -------------
+
+4. Rules followed by compiler while evaluating expressions
+a. Operation between 2 int vars/values will yield int result only
+b. Operation between 2 float vars/values will yield float result only
+c. Operation between int & float var/value will yield float result only
+
+Eg 
+
+5/2 = 2.5 (Wrong) 2 (Correct)			2/5 = 0.4 (Wrong) 0 (Correct)
+5.0/2.0 = 2.5				2.0/5.0 = 0.4
+5.0 / 2 = 2.5				2.0/5 = 0.4
+5/2.0 = 2.5				2/5.0 = 0.4
+
+5. While evaluating expressions with multiple operators, 1st preference is given to operators which are parenthesized (brackets). If there is a tie between * / & % operators, the operator which comes first from left will be evaluated 1st by the compiler followed by the rest & last preference for addition & subtraction.
+
+Eg 3 + 2 * 5 = 13 (Correct) 25 (Wrong)
+
+	3 * 6 / 18			6 / 18 * 3
+Om	1			1
+Manas	1			1
+Abhi	1			1
+Nihar	1			0  (CORRECT)
+Murli	1			1
+
+A lot depends upon how we write the expression.
+
+Rules for assigning names to variables (Also known as identifiers bcoz they are used to identify a variable)
+
+1. Variable name must start/begin with an alphabet and may contain digits & a special character under score (_) only.
+
+2. Variable name can contain max 40 characters only.
+
+3. Do not use "C" keywords for variable names. These are also called as "reserved words" & represent commands/instructions of the language. For e.g. int, char, float, if, else, while, for, do, switch, case, default, struct, etc.
+
+So invalid names are like name of student (space not allowed), 1marks (var name doesn't begin with digit), 
+fail! (only special char _ permitted), $OK (same as previous)
+
+Valid names may be name_stud, marks1, result, etc.
+However avoid too long names bcoz time will be spent in typing the name of var.
+Also avoid names like x, y, z, etc. bcoz in future we won't understand their purpose.
+Always prefer short but sensible names.
+
+A typical C program consists of 4 sections
+1. Type & Declaration Statements - Allocate memory for vars reqd in Program
+2. Input & Output Statements - To accept data in appropriate vars
+3. Arithmetical Operations - Use expressions to get the result
+4. Control Statements - Decision Making
+
+Output Statement - printf() - Remember that C is case sensitive
+
+Syntax (How to use)
+
+1. printf(".......... Text to be displayed on screen .........");   // ; marks end of instruction to compiler
+
+For e.g. 
+printf("Welcome To Databyte");
+
+
+2. To display the contents of a variable
+
+printf(".......... Text to be displayed on screen.... format specifier/s",varname/s);
+format specifiers are commands/instructions for representation of data in correct fashion.
+They are
+%c - char type
+%d - int type
+%f - float type
+
+printf("My age is age and salary is Rs. salary");  // will print as it is i.e. w/o values of vars (incorrect)
+
+printf("My age is %d and salary is Rs. %f",age,salary);
+                           |____________________|          |
+			            |________|
+
+Actual o/p - My age is 21 and salary is Rs. 45000.65
+
+Input Statement - scanf()
+
+Syntax
+
+
+scanf("format specifier/s",&var name/s);
+
+& is called as "address of operator"
+
+for e.g. to accept the data for age (int) and salary (float)
+Note - Do not use scanf() directly bcoz the user may not understand the sequence of i/p i.e. whether
+he should type age first or salary first. scanf() should always be preceeded by printf()
+
+printf("Enter your age and salary :- ");
+scanf("%d %f",&age,&salary);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

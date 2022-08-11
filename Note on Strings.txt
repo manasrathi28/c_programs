@@ -1,0 +1,40 @@
+Strings
+
+A string is an array of characters. A string terminates with a special character '\0' also called as "null character" & the ascii value of which is 0.
+
+An eg of self initialised string - During declaration, always keep in mind that "string" is not a datatype in C.
+pos-->                 0  1  2  3  4  5  6  7
+char name[ ] = {'d','a','t','a','b','y','t','e','\0'};  // for self initialised strings, SIZE of array is not compulsory
+mem adr          600 601 602 603.....
+Note that initialising the string in this manner is tedious (time consuming). So there is an alternative technique
+
+char name[ ] = "databyte";   // \0 is inserted automatically
+
+The 1st technique is good for the sake of understanding that every char in string is accessible using it's index value i.e. position & has an unique address in memory. This will be very useful in string manipulation programs.
+
+Imp functions required for string manipulations which are a part of std header file string.h
+
+1. int strlen(char [ ]) - Returns the length of string without \0 & base is 1
+
+2. void strcpy(char target[ ],char source[ ]) - A function to copy the contents of source string into target string. Note that as strings are arrays, we cannot use = (assignment operator) to copy the contents bcoz operators like =, ==, !=, >, <, etc. are designed to be used on basic types only like int, char, float, etc. & not on derived types like arrays.
+
+3. void strcat(char target[ ],char source[ ]) - A function "string concantenate" to join the contents of source string at the end of target string.
+
+4. int strcmp(char str1[ ],char str2[ ]) - A function to compare 2 strings. This function returns 1 if str1 > str2, -1 if str1 < str2 & 0 if 2 strings are equal. Here the comparison is done on the basis of char by char. For e.g.
+
+str1 = "abhishek",  str2 = "abhijit"   result = 1 bcoz ascii value of s > ascii value of j
+str1 = "nihar",   str2 = "om",  result = -1 bcoz ascii value of n < ascii value of o
+
+Here we cannot use == operator to compare 2 strings
+
+5. int stricmp(char str1[ ],char str2[ ]) - Same as strcmp() but will ignore case while comparing the strings
+
+6. void strupr(char [ ]) - To convert all letters from given string to capital letters.
+
+7. void strlwr(char [ ]) - To convert all letters from given string to small letters.
+
+8. void strrev(char [ ]) - To reverse the contents of a string. This fn is basically used as a form of encryption.
+
+
+
+

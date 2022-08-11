@@ -1,0 +1,17 @@
+Recursion
+
+When a call is given to the same function from itself, then the function is said to be a "recursive function" & the process is known as "recursion" OR if the calling & called functions are same, then the function is said to be a recursive function.
+
+Recursion is sometimes looked upon as a substitute for looping commands. The recursive function should contain a conditional statement to terminate the recursion, otherwise it will lead to an error similar to "infinite loop".
+
+no	fv
+1	1
+2	2
+3	6
+4	24
+5	120
+6	720
+7	5040
+..
+
+fact(x) = x * fact(x-1)	

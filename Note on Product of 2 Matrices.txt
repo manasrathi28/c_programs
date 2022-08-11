@@ -1,0 +1,54 @@
+Multiply TWO 2 x 2 matrices
+
+	a[2][2]			b[2][2]			      p[2][2]
+
+pos-->	00	01		00	01		    00	    01
+vals-->	1	2		5	6		1*5+2*7	1*6+2*8
+			x			=
+	10	11		10	11		    10	    11
+	3	4		7	8		3*5+4*7	 3*6+4*8
+
+    r  c          r  0        0  c        r   1      1   c
+p[0][0] =  a[0][0] * b[0][0] + a[0][1] * b[1][0]
+p[0][1] =  a[0][0] * b[0][1] + a[0][1] * b[1][1]
+p[1][0] =  a[1][0] * b[0][0] + a[1][1] * b[1][0]
+p[1][1] =  a[1][0] * b[0][1] + a[1][1] * b[1][1]
+
+for (r=0;r<2;r++)
+{
+	for (c=0;c<2;c++)
+		p[r][c] = a[r][0] * b[0][c] + a[r][1] * b[1][c]; // this term represents all 4 terms
+}
+
+If we see the pattern, it appears that as it is a 2 x 2 matrix, 2 terms are added & the pattern is
+r00c, r11c
+If it is 3 x 3 matrix, 3 terms are added & the pattern is
+r00c, r11c, r22c
+& so on...
+To generalise, we will write one more loop inside c loop, to generate nos 0, 1, 2, etc.
+for (r=0;r<3;r++)  // m1
+{
+	for  (c=0;c<3;c++)  // n2
+	{
+		sum = 0;
+		for (k=0;k<3;k++)  // n1 or m2 which are same
+			sum += a[r][k] * b[k][c];  // running total
+
+		p[r][c] = sum;
+	}
+}	
+
+	a[3][4]				b[4][1]		p[3][1]
+	
+	1	2	3	4	   1	  	  33	
+
+	5	6	7	8	    3		  77
+
+	3	2	1	5	    2		  36
+		
+					    5
+
+
+ 
+
+

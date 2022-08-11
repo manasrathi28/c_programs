@@ -1,0 +1,94 @@
+Decision Making Command  -  The "if" command
+Syntax
+
+1.  if (condition/s)
+     	do this;
+
+If the condition in front of "if" command is satisfied, the statement "do this" will execute. The "else" command is not compulsory. Specifying "indent" (i.e. spacing) for statements inside "if" command is not compulsory but used for "readability" purpose.
+
+2. if (condition/s)
+	do this1;
+    else
+	do that1;
+
+If the condition in front of "if" command is satisfied, the statement "do this1" will execute & if not satisfied, will execute "do that1" statement.
+
+3. if (condition/s)
+    {
+	do this1;
+	do this2;
+	do this3;
+	.......
+     }
+     else
+     {
+	do that1;
+	do that2;
+	do that3;
+	.....
+     }
+The { } (pair of curly braces) indicate scope of "if" & "else" command. This syntax is required to execute all statements within the scope, if the condition in front of "if" command is true or false.
+
+4. The above syntax deals with 2 possibilities only. However in real life applications, we deal with multiple possibilities. In such cases, we use "nested if" syntax.
+if (condition1)					if (per < 35)
+	do this1;					    printf("Fail");
+else						else   // Pass, per >= 35
+{						{
+	if (condition2)				      if (per < 50)
+		do this2;				            printf("Pass Class");
+	else 					      else   // per >= 50
+	{					      {
+		if (condition3)				if (per < 60)
+			do this3;				    printf("IInd Class");
+		else					else  // per >= 60
+		{					{
+			if (condition4)			     if (per < 75)
+				do this4;			       printf("Ist Class");
+			else				     else
+				do this5;			       printf("Distinction");
+		}					}
+	}					       }
+}						}
+						
+In nested if command, how many "if" commands are reqd?
+
+No of if's = No of possibilities - 1
+
+Fail/Pass Class/IInd Class/Ist Class/Distinction - 5 possibilities, so 4 "ifs" required
+
+5. The "if .... else if" syntax - This is similar to "if....else" syntax but appears to be less complex 
+
+if (condition1)				if (per < 35)
+	do this1;					printf("Fail");
+else if (condition2)				else if (per < 50)  // role of else is >= 35, if < 50
+	do this2;					printf("Pass Class");	
+else if (condition3)				else if (per < 60)
+	do this3;					printf("IInd Class");
+else if (condition4)				else if (per < 75)
+	do this4;					printf("Ist Class");
+else					else
+	do this5;					printf("Distinction");
+
+Pls note that only "else" statement cannot apply a new condition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

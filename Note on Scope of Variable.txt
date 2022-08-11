@@ -1,0 +1,11 @@
+Scope of Variables
+
+This indicates the accessibility/visibility of a variable/s to a certain section of code in a program. There are 2 types of scopes.
+
+1. Local    2. Global
+
+Variables declared in function scope ({ }) are called as "local variables" & are accessible only to the code of that function. 
+
+Variables declared outside the scope of any function i.e. typically at the top below the declaration of header files, are called as "global variables". These variables are accessible to the code of all functions. Hence sometimes they are also referred as "shared variables".
+
+In case their is a conflict between local & global variables with same name, then preference is always given to local variable.

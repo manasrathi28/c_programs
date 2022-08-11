@@ -1,0 +1,6 @@
+Hello All!
+Let us see whether we can view
+these contents of a text file through
+a simple C program?
+Hope it works!
+19-Apr-2022

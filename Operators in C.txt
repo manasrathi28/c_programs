@@ -1,0 +1,53 @@
+Operators in C language (8 types)
+
+1. Arithmetical Operators:      +  -  /   *  %  There is no operator to calculate power value
+
+2. Relational/Comparison Operators:  >  <   >=  <=  == (to compare equality)  != (to compare inequality)
+							      Not equal to operator
+
+3. Logical Operators:    &&  ||   !
+
+4. Increment / Decrement Operators:    ++  --  
+2 subtypes    a. Pre    b. Post
+If the operator preceeds the operand (var/constant), it is called as pre and if it follows operand, it is post. These operators change the value of variable by 1 only.
+
+5. Assignment Operators:    =  += -= *= /= %= (Last 5 are also called as compound assignment operators) & work more efficiently than expressions
+
+6. Conditional Operator:    ? Used in decision making. Also called as "ternary operator". ternary means 3 i.e. this operator requires 3 args
+Arithmetical operators are also called as "binary operators" bcoz they require 2 values/vars/operands
+Increment Decrement operators are called as "unary operators" bcoz they can work on single var also
+e.g. a++,  --b
+
+7. Bitwise Operators:  & | ^ << >> ~ etc. These operators are used to operate on bits i.e. on 0 & 1 only & hence are reqd to write low level progs.
+
+1 byte = 8 bits
+
+The lowest unit for measuring memory is bit & higher unit is byte. Using combination of bits, size of datatype can be determined.
+
+1 bit has 2 combinations i.e. 0 & 1 i.e. 2^1
+2 bits have 4 combinations i.e. 00, 01, 10 & 11 i.e. 2^2
+3 bits have 8 combinations i.e. 000, 001, 010, 011, 100, 101, 110 & 111 i.e. 2^3
+......
+n bits should have 2^n combinations but bcoz integers can store -ve & +ve nos, the 1st bit stores the sign of no & hence should not be included to calculate capacity. 0 is +ve & 1 is -ve
+
+So it is 2^n-1. So capacity of a datatype of 8 bits is 2^7
+We all are using 32 bit compilers where capacity of int is 2^31 i.e.
+-2147483648 to +2147483647. This means so many combinations are possible with 31 bits.
+
+If we are using a 16 bit compiler, capacity of int is -32768 to +32767 i.e. 2^15
+
+If we "unsigned int", capacity is 0 to 4294967295 bcoz combinations with 0 as MSD (most significant bit) will add to combinations of 1 as MSD.
+
+unsigned int rollno  ==> %u
+unsigned int salary ==> %u
+
+8. Special Operators:    . (dot)  -> (arrow)  
+
+
+
+
+
+
+
+
+

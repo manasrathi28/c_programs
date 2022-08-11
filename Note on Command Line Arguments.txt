@@ -1,0 +1,17 @@
+Command Line Arguments
+
+It is possible to pass parameters/arguments to our C program from command line. These args are accepted by our program through main( ). Traditionally they are called as "argc" & "argv". "argc" is argument counter & is an int value. It is used to know the no of arguments passed to main() & is extremely useful for validation purpose. "argv" is argument vector & is basically an array of pointers to strings. It is used to read the value of argument.
+
+So the syntax of main() now becomes
+
+int main(int argc,char *argv[ ])
+{
+
+
+
+
+}
+
+To run an application, we are henceforth going to create "exe" files i.e. self executable files which can be executed directly from OS. The source code of a program/application cannot be viewed/displayed from "exe" file.
+
+

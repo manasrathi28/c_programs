@@ -1,0 +1,6 @@
+Lifetime of a variable
+
+This indicates the availability/validity of a variable during the course of execution of a program. Variables declared in function scope perish (get destroyed) the moment the entire code in the function gets executed. However, if local variables of a function are declared using "static" keyword, then they remain in memory till the end of execution of the program.
+
+Global variables remain in memory till the end of execution of program i.e. have same lifetime as that of static local vars.
+

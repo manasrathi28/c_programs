@@ -1,0 +1,54 @@
+The "C" preprocessor
+
+These are commands within C language which will process the source code before it is sent to the compiler. Commands in C preprocessor are called as "preprocessor directives" & start with symbol "#". These commands may appear anywhere in our C program. They offer following features
+
+1. Macro Expansion
+2. File Inclusion
+3. Conditional Compilation
+4. Miscellenous Directives
+
+Macro Expansion - In computer science, macro stands for a "short program". These macros are defined at the top of C program, just below the header file declaration. for e.g.
+#define SIZE 50
+#define PI 3.14     //  macro definition, PI-macro template, 3.14-macro expansion
+
+int main()
+{
+	int nos[SIZE];
+	int r = 10;
+	float ac = PI * r * r;
+	.....
+}
+Before the code is sent to the compiler, SIZE is substituted or replaced with 50 & PI with 3.14.
+Now you may feel, what is the harm in declaring
+float pi = 3.14;
+This is not recommended for 2 reasons
+1. PI is a constant & not a variable. In such cases, other programmers studying your code get confused.
+2. If declared as a variable, the job of substitution is done by the compiler & not the preprocessor. The compiler is meant to perform intelligent task & not the task of substitution as it will make your program inefficient.
+Source Code --> Preprocessor --> Compiler
+3. It is customary to write the preprocessors in caps to distinguish them from vars
+
+Differences between Macro & Function
+
+1. Macros are not compiled where as Functions are compiled.
+2. Speed execution of macro is more than that of function.
+3. Macros are involved for simple tasks like substitutions or simple calculations whereas functions are meant to perform complex tasks.
+4. Macros are executed by preprocessors whereas functions are executed by compilers.
+5. Macros do not deal with data types & type conversions & hence may lead to inaccurate/inconsistent results which is not so with functions.
+
+3. Conditional Compilation - While working on projects for clients, the product is developed as per the requirement of client. However after delivery of product, the customer may request some changes, which will require some alteration in your code. However it is not wise to delete the old code & replace it with new code. This is bcoz the customer may again go back & request for old code.
+
+Now you may feel that instead of deleting old code, why not comment it out? However commenting the code has a problem. Comments cannot be nested i.e. old code may already have some comments in it.
+
+/*
+	// old code
+	code1;    /* comment1 */
+
+	code2;  // comment2
+*/
+
+The above code even after commenting will not compile. In such cases, we may go for Conditional Compilation i.e. if a particular macro is defined, we would like to execute a particular section of code, otherwise not.
+
+
+
+
+

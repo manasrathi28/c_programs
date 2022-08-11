@@ -1,0 +1,25 @@
+File Handling OR Input Output in C Language
+
+The power of any programming language lies in the fact as to whether the programming language can communicate with permanent memory (HD, PD, CD, Floppy, etc) or not. Till now, whatever programs we have written using vars, arrays, strings, structures, etc. were handled in temporary memory i.e. RAM. This was good enough as the working speed of temp memory is much faster as compared to permanent memory. A developer while writing programs, thinks of using permanent memory at the end. For eg in a game, may be the player wants to save his name, score, last level played, etc., so that he may continue the game next time from that state. It's here where the permanent memory comes into picture.
+
+Data in permanent memory is always stored in the form of a "file". To carry out operations on this file, C provides us with a special set of predefined fns from stdio.h like fopen(), fgetc(), fputc(), fprintf(), fscanf(), fwrite(), fread(), etc. The letter "f" denotes that the fns are used to carry out "file operations".
+
+To access a file, use "fopen()". This fn requires 2 arguments/parameters
+1. path & filename as string
+2. file access mode i.e. the purpose to access the file i.e. "r" - to carry out only read operations, "w" - to carry out write operations, "a" - to carry out addition of data operations, etc.
+
+This request of fopen() is sent to Hardware via Operating System. The OS is responsible to manage the Hardware. 
+		C Application
+		------------------
+		       O.S.
+		------------------
+		  Hardware
+
+In return, the OS will not return the file contents directly. Instead, the OS returns a "pointer" to a special structure called as "FILE" defined in stdio.h. This "FILE" contains vital (imp) information about the file for e.g. it's name, file size, location in memory, date & time stamp, etc. Most important is that it contains a pointer to 1st character of file contents. Using this pointer, we can read all the contents of the file.
+
+
+
+
+
+
+

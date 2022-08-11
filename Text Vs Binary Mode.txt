@@ -1,0 +1,9 @@
+Text Vs Binary Mode of writing data to a file
+
+By default, data is written in "text" mode. However this is not an efficient technique of storing data to a file & we observe discrepancy in memory management & file management. According to memory management, the size of "recs.txt" containing 5 records should have been 90 bytes only. It's bcoz, empid being an integer should require 4 bytes (can be confirmed using sizeof()), name is char array with size 10 bytes & sal which is a float should require 8 bytes. However in text mode even the digits of a no are stored in form of characters & hence leads to more memory requirement. For e.g. salary of 25000.75 reqd 8 bytes OR empid 123456 reqd 6 bytes.
+
+Hence to make storage management more efficient & secured, we have to store the records using "binary format". However here "fprintf()" & "fscanf()" are of no use. Instead us "fwrite()" & "fread()" fns whose syntax is given below.
+
+	fwrite
+	---------- (Address of structure var,size of structure var,No of recs to write/read,file pointer);
+	fread

@@ -1,0 +1,27 @@
+The "switch case" command
+
+This command is used in decision making like the "if" command. However it has some limitations like it can work with char or int datatypes only & doesn't permit the use of logical operators or relational operators. It is typically used with do.....while loops in Menu Driven Programs.
+
+It's syntax is
+
+switch(var or expression)
+{
+	case value1:
+		do this1;
+		do this2;
+		.......
+		break;
+
+	case value2:
+		do that1;
+		do that2;
+		........
+		break;
+
+	.......................
+
+	default:  // not compulsory, will execute if above cases are not satisfied
+		do this;
+		do that;
+}
+

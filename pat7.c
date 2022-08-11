@@ -1,0 +1,31 @@
+// Pattern - 7, triangle pattern, HW Assignment
+/*
+
+    *		
+   * *			
+  * * *			
+ * * * *		
+* * * * *		
+
+Base Pattern is Right Angled Triangle
+
+*/
+#include <stdio.h>
+
+int main()
+{
+	int r, c;
+	for (r=1;r<=5;r++)
+	{
+		// space pattern
+		for (c=1;c <= 5-r;c++)
+			printf("%c",32);  // 32 is ascii value of space.	printf(" "); OK
+			
+		// star pattern
+		for (c=1;c<=r;c++)
+			printf("* ");
+		
+		printf("\n");
+	}
+	return 0;
+}

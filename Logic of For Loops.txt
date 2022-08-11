@@ -1,0 +1,101 @@
+int no, i ;  // only declaration
+no = 5
+
+no  i     no * i
+5 x 1 = 5
+5 x 2 = 10
+5 x 3 = 15
+5 x 4 = 20
+....
+....
+....
+5 x 12 = 60
+
+for (i=1; i <= 12  ;i++)
+	printf("%d x %d = %d",no,i,no*i);
+
+no = 5
+             i              no
+fv = 1 * 2 * 3 * 4 * 5
+fv = 1
+for (i=2; i <= no  ;i++)
+	fv = i * fv;
+
+no	fv
+1	1
+2	2
+3	6
+4	24
+5	120
+6	720
+7	5040
+8	40320
+....
+fact(no) = no * fact(no-1)
+
+             i  -->        no
+fv = 1 * 2 * 3 * 4 * 5         // fv = 2, 6, 24, 120
+
+        i -->
+       no   
+fv = 5 * 4 * 3 * 2
+
+fv = 1
+for (i=no; i >= 2  ;i--)   // decrementing loop
+	fv = i * fv;  // fv = 5, 20, 60, 120
+
+
+
+
+i++ is same as ++i bcoz there is 1 operator only, there is no precedence as such. So result is same
+
+j = ++i;   OR j = i++;  // here as we have multiple operators ++ & =, they make difference
+
+
+base = 5
+index = 4
+
+  i = 1  ..........  index
+pv = 5 * 5 * 5 * 5
+
+pv = 1;
+for (i=1; i <= index   ;i++)
+	pv = pv * base;
+
+
+Laws of indices
+
+5^0 = 1
+5^1 = 5
+5^2 = 25
+5^3 = 125
+5^4 = 625
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+A string is not a datatype but it is a 1D array of characters.
+
+If we want to store several such strings, then we will require a 2D array of characters.
+
+char names[5][10] = {"manas","om","nihar","abhiram","ajay"};  // OK
+
+Though the names appear as 1D array, why is it declared as a 2D array? It is bcoz it is a 1D array of strings, but the problem is that there is no datatype called as "string". So when represented as an array, it is represented as 2D array & which we can well understand using foll. fig
+                     R  C
+char names[5][10] = {
+		"manas",
+		"om",
+		"nihar",
+		"abhiram",
+		"ajay"
+		};     // OK & more convincing when represented in the form rows & columns
